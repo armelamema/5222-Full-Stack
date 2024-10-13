@@ -1,0 +1,18 @@
+
+ doctype html
+ html
+     head
+         title Top 15 Most Watched Shows
+     body
+         h1 Top 15 Most Watched Shows
+         table
+             thead
+                 tr
+                     th Show Title
+                     th Year
+             tbody
+                 each show in shows
+                     tr
+                         td: a(href=`https://imdb.com/title/${show.ids.imdb}`, target='_blank')= show.title
+                         td= show.year
+ 
